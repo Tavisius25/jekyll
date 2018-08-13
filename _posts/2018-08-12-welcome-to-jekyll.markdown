@@ -1,25 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2018-08-12 23:14:39 -0400
-categories: jekyll update
+title:  "Preface: Motivation and Direction"
+date:   2018-08-12 09:04:44 -0400
+categories: Bayesian Statistics
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+This beings a journey on learning Bayesian statistics. Motivated by working to understand advancements in the field of machine learning through recent papers and lectures, this blog serves as a log along my journey to understanding many of the underpinning statistical concepts in modern predictive models. Here I will present the definitions of theorems of the Bayesian approach and work to advance my understanding through derivations and practical demonstrations. I hope to provide both worked out solutions to problems and code for computational tasks. All code will be in either R or Python and detailed documentation of configuring your environment will proceed any programming task. I am consulting three excellent resources on Bayesian statistics and inference. `David J.C. MacKay's Information Theory, Inference, and Learning Algorithms`, `Allen B. Downey's Think Bayes`, and `Bayesian Data Analysis by Gelman et al.`. I will pull definitions, theorems, and guiding principles from these textbooks, but my objective is to write clearly and without jargon. After all, Bayesian statistics and the larger space of machine learning are aimed at being interpretable. I will update this blog every Monday, Wednesday, and Friday. Working from definitions, to simple models, and finally more complex functions we will build up our confidence and our competency. Let the journey begin! 
