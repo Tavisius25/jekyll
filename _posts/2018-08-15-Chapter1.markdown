@@ -1,0 +1,8 @@
+---
+layout: post
+comments: true
+title:  "Chapter 1: Beginning Bayesian Analysis"
+date:   2018-08-12 09:04:44 -0400
+categories: "Bayesian Statistics"
+---
+This is a test for math type \frac{n!}{k!(n-k)!}
