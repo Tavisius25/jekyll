@@ -33,6 +33,7 @@ disqus:
 
 # Build settings
 markdown: kramdown
+mathjax: true
 theme: jekyll-theme-hydeout
 plugins:
   - jekyll-feed
