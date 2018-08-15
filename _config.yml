@@ -32,7 +32,7 @@ disqus:
   shortname: https-probablylearning-netlify-com.
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 theme: jekyll-theme-hydeout
 plugins:
   - jekyll-feed
