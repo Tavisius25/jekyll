@@ -26,7 +26,7 @@ github_username:  Tavisius25
 
 # Build settings
 markdown: kramdown
-theme: hydeout
+theme: jekyll-theme-hydeout
 plugins:
   - jekyll-feed
 
