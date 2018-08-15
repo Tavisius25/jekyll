@@ -24,6 +24,11 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  Tavisius25
 
+
+#Disqus
+disqus:
+  shortname: https-probablylearning-netlify-com.
+
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-hydeout

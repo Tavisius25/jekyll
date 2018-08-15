@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Preface: Motivation and Direction"
 date:   2018-08-12 09:04:44 -0400
 categories: Bayesian Statistics
