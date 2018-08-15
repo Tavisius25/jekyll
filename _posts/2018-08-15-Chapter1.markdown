@@ -4,5 +4,6 @@ comments: true
 title:  "Chapter 1: Beginning Bayesian Analysis"
 date:   2018-08-12 09:04:44 -0400
 categories: "Bayesian Statistics"
+math: true
 ---
 This is a test for math type $$ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} $$
