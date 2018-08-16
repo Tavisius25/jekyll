@@ -24,9 +24,9 @@ Bayesian statistics is so named for Bayes' theorem, a relatively simple equation
 
 For review, a probability is a value between 0 and 1 inclusive that represents a degree of belief in a fact or prediction. The value 1 represents complete certainty and 0 means the proposition is false. Intermediate values signify degrees of certainty. A probability is conditional if it is based on some accompanying information. For example I may want to know my probability of contracting pneumonia this month. This probability is conditioned on a number of factors including but not limited to age, weather, existing conditions, and exposure to certain bacteria, viruses, and fungi. 
 
-Joint probability expresses the probability that two events are true. A joint ensemble XY is an ensemble where each outcome is an ordered pair x,y with $$x \in A_x = \{a_1,...,a_I\}$$ and $$y \in A_y = \{b_1,...,b_J\}$$ The joint probability of two random variables, X and Y is $$P(X,Y)$$. $$P(X,Y)$$ when the events are unrelated such as the probability of getting heads by tossing a fair coin and getting a 6 from rolling a die is expressed as $$P(X,Y) = P(X)P(Y)$$. However this is not always the case as one of the elements in the ensemble may be related to the other. There then exists a more general relation $$P(X,Y) = P(X)P(Y$$\|$$X)$$. It is worth noting that joint probabilities are commutative that is, $$P(X,Y) = P(X)P(Y$$\|$$X)$$ and $$P(Y,X) = P(Y)P(X$$\|$$Y)$$
+Joint probability expresses the probability that two events are true. A joint ensemble XY is an ensemble where each outcome is an ordered pair x,y with $$x \in A_x = \{a_1,...,a_I\}$$ and $$y \in A_y = \{b_1,...,b_J\}$$ The joint probability of two random variables, X and Y is $$P(X,Y)$$. $$P(X,Y)$$ when the events are unrelated such as the probability of getting heads by tossing a fair coin and getting a 6 from rolling a die is expressed as $$P(X,Y) = P(X)P(Y)$$. However this is not always the case as one of the elements in the ensemble may be related to the other. There then exists a more general relation $$P(X,Y) = P(X)P(Y$$\|$$X)$$. It is worth noting that joint probabilities are commutative that is, $$P(X,Y) = P(X)P(Y$$\|$$X)$$ and $$P(Y,X) = P(Y)P(X$$\|$$Y)$$ {% cite MacKay %} 
 
-Often rather than writing down the joint probability directly, we define an ensemble in terms of conditional probabilities. The following rules will prove useful. (N.B. $$\mathcal{H}$$ denotes assumptions on which the probabilities are formed.)
+Often rather than writing down the joint probability directly, we define an ensemble in terms of conditional probabilities. The following rules will prove useful. (N.B. $$\mathcal{H}$$ denotes assumptions on which the probabilities are formed.) {% cite MacKay %}
 
 Product Rule
 : $$P(x,y$$\|$$\mathcal{H}) = P(y$$\|$$\mathcal{H}) P(x$$\|$$y,\mathcal{H})$$ $$ = P(x$$\|$$\mathcal{H})P(y$$\|$$x,\mathcal{H})$$, this rule is also referred to as the chain rule.
@@ -53,7 +53,7 @@ Bayes' Theorem
 
 $$=\frac{P(x \mid y, \mathcal{H})P(y \mid \mathcal{H})}{\sum_{y'} P(x\mid y', \mathcal{H}) P(y' \mid \mathcal{H})}$$
 
-This marble example demonstrates one of the uses of Bayes' theorem, providing a strategy to get from $$P(x,y \mid \mathcal{H})$$ to $$P(y,x \mid \mathcal{H})$$
+This marble example demonstrates one of the uses of Bayes' theorem, providing a strategy to get from $$P(x,y \mid \mathcal{H})$$ to $$P(y,x \mid \mathcal{H})$$ {% cite Downey %}
 
 ## Bayesian Interpretation
 Introducing Bayes theorem invites discussion of its intuitive meaning. In what is often called the diachronic interpretation, Bayes theorem provides a way to update the probability of a hypothesis _H_, in light of some data _D_ {% cite Downey %} 
