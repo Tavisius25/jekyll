@@ -4,7 +4,6 @@ comments: true
 title:  "Chapter 1: Beginning Bayesian Analysis"
 date:   2018-08-15 09:04:44 -0400
 categories: "Bayesian Statistics"
-<!-- math: true -->
 ---
 ## Direction
 Our first major milestone is understanding Bayesian inference and how this approach differs from other ideas on statistical inference. 
