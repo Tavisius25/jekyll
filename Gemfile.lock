@@ -93,6 +93,7 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2018.5)
       tzinfo (>= 1.0.0)
+    unicode (0.4.4.4)
     wdm (0.1.1)
 
 PLATFORMS
@@ -104,6 +105,7 @@ DEPENDENCIES
   jekyll-scholar (~> 5.14)
   jekyll-theme-hydeout (~> 3.3)
   tzinfo-data
+  unicode (~> 0.4)
   wdm (~> 0.1.0)
 
 BUNDLED WITH
