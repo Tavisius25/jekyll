@@ -66,7 +66,7 @@ In this view, each component of the theorem has a name and associated purpose.
 - $$P(D \mid H)$$ is the probability of the observation under the hypothesis. This is called the _likelihood_.
 - $$P(D)$$ is the probability of the observation under any hypothesis. This is called the _normalizing constant_.
 
-From these terms, the _prior_ and _normalizing constant_ are the most difficult to calculate. The former often relies on assumptions about the nature of the problem, and the latter can be intractable requiring expensive computational or approximation. What this reveals is that **inference relies on assumptions**. 
+From these terms, the _prior_ and _normalizing constant_ are the most difficult to calculate. The former often relies on assumptions about the nature of the problem, and the latter can be intractable requiring expensive computation or approximation. What this reveals is that **inference relies on assumptions**. 
 
 We have just covered a lot of vocabulary and essential definitions. Next time we will investigate inference further using our new found language. Before then I will discuss some surprising and more difficult problems relying on Bayes' theorem to increase our statistical confidence. 
 
