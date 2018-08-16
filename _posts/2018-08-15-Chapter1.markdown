@@ -2,17 +2,76 @@
 layout: post
 comments: true
 title:  "Chapter 1: Beginning Bayesian Analysis"
-date:   2018-08-12 09:04:44 -0400
+date:   2018-08-15 09:04:44 -0400
 categories: "Bayesian Statistics"
 <!-- math: true -->
 ---
-This is a test for math type 
+## Direction
+Our first major milestone is understanding Bayesian inference and how this approach differs from other ideas on statistical inference. 
 
-$$A_x + 45 -32^2 = B_y $$
+Bayesian inference
+: The process of fitting a probability model to a set of data and summarizing the result by a probability distribution on the parameters of the model and on the unobserved quantities such as predictions for new observations {% cite Gelman %} 
 
-Well now that we can type in math format, let's try a list
+This concerns us because we want to make inferences from data using probability models for quantities we observe and for quantities we want to learn. Bayesian inference is distinct for its clear use of probability to quantify uncertainty in inferences based on statistical data analysis. Gelman et al. describe Bayesian methods as having three components:
 
-1. Item the first 
-2. Item the third 
+1. Setting up a comprehensive probability model. That is a joint probability distribution for all observable and unobservable components in a problem. This model synthesizes all knowledge about the nature of the problem in question 
+2. Conditioning on observed data. The appropriate posterior distribution must be calculated and interpreted. This posterior is a conditional probability distribution of the desired unobserved quantities, given the observed data 
+3. Evaluating the resulting posterior distribution for model fit. This includes understanding how well model fits the data, the plausibility of the result, and how sensitive the result is to the model assumptions from 1. 
 
-* something else 
+This framework is useful for understanding the essence of Bayesian models; however, we are getting ahead of ourselves. We must introducer the vocabulary of Bayesian statistics. 
+
+## Bayes' Theorem 
+Bayesian statistics is so named for Bayes' theorem, a relatively simple equation to derive provided we understand conditional and joint probabilities. Let's introduce the fundamental 
+
+For review, a probability is a value between 0 and 1 inclusive that represents a degree of belief in a fact or prediction. The value 1 represents complete certainty and 0 means the proposition is false. Intermediate values signify degrees of certainty. A probability is conditional if it is based on some accompanying information. For example I may want to know my probability of contracting pneumonia this month. This probability is conditioned on a number of factors including but not limited to age, weather, existing conditions, and exposure to certain bacteria, viruses, and fungi. 
+
+Joint probability expresses the probability that two events are true. A joint ensemble XY is an ensemble where each outcome is an ordered pair x,y with $$x \in A_x = \{a_1,...,a_I\}$$ and $$y \in A_y = \{b_1,...,b_J\}$$ The joint probability of two random variables, X and Y is $$P(X,Y)$$. $$P(X,Y)$$ when the events are unrelated such as the probability of getting heads by tossing a fair coin and getting a 6 from rolling a die is expressed as $$P(X,Y) = P(X)P(Y)$$. However this is not always the case as one of the elements in the ensemble may be related to the other. There then exists a more general relation $$P(X,Y) = P(X)P(Y$$\|$$X)$$. It is worth noting that joint probabilities are commutative that is, $$P(X,Y) = P(X)P(Y$$\|$$X)$$ and $$P(Y,X) = P(Y)P(X$$\|$$Y)$$
+
+Often rather than writing down the joint probability directly, we define an ensemble in terms of conditional probabilities. The following rules will prove useful. (N.B. $$\mathcal{H}$$ denotes assumptions on which the probabilities are formed.)
+
+Product Rule
+: $$P(x,y$$\|$$\mathcal{H}) = P(y$$\|$$\mathcal{H}) P(x$$\|$$y,\mathcal{H})$$ $$ = P(x$$\|$$\mathcal{H})P(y$$\|$$x,\mathcal{H})$$, this rule is also referred to as the chain rule.
+
+Sum Rule
+: $$P(x$$\|$$\mathcal{H}) = \sum_yP(x,y$$\|$$\mathcal{H})$$ = $$\sum_yP(y$$\|$$\mathcal{H}) P(x$$\|$$y,\mathcal{H})$$ 
+
+We now have all the components to introduce Bayesian statistics through Bayes rule, but let's first pose a motivating example. Suppose there are two bags of marbles. Bag 1 contains 20 blue marbles and 10 red. Bag 2 contains 15 of each.  If I select from the bags at random and the marble I remove is blue, what is the probability that it came from Bag 1? 
+
+We can frame this question as a conditional probability. We want $$P(Bag 1 $$\|$$blue)$$, but it is not immediately clear how to compute this. However, we have assembled all the tools we need. Turning to the Product Rule, we see that our question is actually a component of the overall equation. $$P(Bag 1 $$\|$$blue)$$ becomes 
+
+$$P(Bag 1 $$\|$$blue)P(blue) = P(Bag1)P(blue$$\|$$Bag1)$$.
+
+Now, we see that we know in fact all of the other components given assumptions about the problem. Doesn't this sound like part 1 of Gelman's framework? $$P(blue) = \frac{35}{60}$$, $$P(blue$$\|$$Bag1) = \frac{2}{3}$$, and $$P(Bag1) = \frac{1}{2}$$ 
+
+$$P(Bag 1 $$\|$$blue) = \frac{P(Bag1)P(blue \mid Bag1)}{P(blue)}$$
+
+$$P(Bag 1 $$\|$$blue) = \frac{(\frac{1}{2})(\frac{2}{3})}{\frac{35}{60}}$$ $$\approx 0.57$$
+
+To solve this we applied Bayes rule. Formally stated that is 
+
+Bayes' Theorem 
+: $$P(y\mid x,\mathcal{H}) = \frac{P(x\mid y,\mathcal{H})P(y \mid \mathcal{H})}{P(x \mid \mathcal{H})}$$
+
+$$=\frac{P(x \mid y, \mathcal{H})P(y \mid \mathcal{H})}{\sum_{y'} P(x\mid y', \mathcal{H}) P(y' \mid \mathcal{H})}$$
+
+This marble example demonstrates one of the uses of Bayes' theorem, providing a strategy to get from $$P(x,y \mid \mathcal{H})$$ to $$P(y,x \mid \mathcal{H})$$
+
+## Bayesian Interpretation
+Introducing Bayes theorem invites discussion of its intuitive meaning. In what is often called the diachronic interpretation, Bayes theorem provides a way to update the probability of a hypothesis _H_, in light of some data _D_ {% cite Downey %} 
+
+$$P(H\mid D) = \frac{P(H)P(D\mid H)}{P(D)}$$
+
+In this view, each component of the theorem has a name and associated purpose. 
+- $$P(H)$$ is the probability of the hypothesis prior to any observation. This is called the _prior_.
+- $$P(H \mid D)$$ is the desired result, the probability of the hypothesis after observing the data. This is called the _posterior_.
+- $$P(D \mid H)$$ is the probability of the observation under the hypothesis. This is called the _likelihood_.
+- $$P(D)$$ is the probability of the observation under any hypothesis. This is called the _normalizing constant_.
+
+From these terms, the _prior_ and _normalizing constant_ are the most difficult to calculate. The former often relies on assumptions about the nature of the problem, and the latter can be intractable requiring expensive computational or approximation. What this reveals is that **inference relies on assumptions**. 
+
+We have just covered a lot of vocabulary and essential definitions. Next time we will investigate inference further using our new found language. Before then I will discuss some surprising and more difficult problems relying on Bayes' theorem to increase our statistical confidence. 
+
+References
+----------
+
+{%bibliography --file chapter1%} 
